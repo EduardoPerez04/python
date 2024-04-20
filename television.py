@@ -31,6 +31,8 @@ class Television:
                 self.__muted = True
             else:
                 self.__muted = False
+        else:
+            self.__volume = Television.MIN_VOLUME
 
     def channel_up(self) -> None:
         """
@@ -75,6 +77,6 @@ class Television:
         Method to show/print tv status, channel, volume.
         """
         if self.__muted:
-            return f" Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}"
+            return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}"
         else:
-            return f" Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}"
+            return f"Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}"
